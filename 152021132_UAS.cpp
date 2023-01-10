@@ -1,0 +1,41 @@
+#include <iostream>
+using namespace std;
+
+int main(){
+
+float n,x[100],y[100],xy,x2,sigmax,sigmay,r,kd;
+
+    cout << "masukan nilai n : ";
+    cin >> n;
+ 
+
+    for (int i = 1; i <= n; i++) {
+        cout << "masukan nilai x ke-" << i << " : ";
+        cin >> x[i];
+        cout << "masukan nilai y ke-" << i << ": ";
+        cin >> y[i];
+  }
+
+        cout << "Nilai korelasi r = " << r;
+
+        cout << "Nilai koefisiensi determinasi = " << kd;
+
+r = 0;
+
+        if (r<0)
+          cout << "Hubungan antara variabel x dan y adalah negatif, dimana jika nilai x bertambah, maka nilai y mengecil, dan juga sebaliknya";
+        else if (r=0)
+          cout << "Tidak ada hubungan antara variabel x dan y";
+        else if (r>0 && r<=0.09)
+          cout << "Hubungan korelasinya diabaikan";
+        else if (r>=0.1 && r<=0.29)
+          cout << "Hubungan korelasinya rendah";
+        else if (r>=0.3 && r<=0.49)
+          cout << "Hubungan korelasinya moderat";
+        else if (r>=0.5 && r<=0.7)
+          cout << "Hubungan korelasinya sedang";
+        else if (r>=0.7)
+          cout << "Hubungan korelasinya sangat kuat";
+        
+  return 0;
+}
